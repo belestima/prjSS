@@ -1,2 +1,78 @@
 # prjSS
-Sixth Street Case Study
+Project name is prjSS (Project for Sixth Street)
+
+## Setup
+
+```bash
+python -m venv .venv
+.\.venv\Scripts\activate
+python -m pip install --upgrade pip
+python -m pip install -e .
+```
+
+## Run
+
+```bash
+python -m main
+```
+
+## AWS CDK Deployment
+
+This project includes AWS CDK infrastructure to create an S3 bucket, bucket policy, and Lambda function for processing files.
+
+### Prerequisites
+
+- AWS CLI configured with appropriate permissions
+- CDK CLI installed (`npm install -g aws-cdk`)
+
+### Deploy
+
+1. Navigate to the cdk directory:
+   ```bash
+   cd cdk
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Bootstrap CDK (first time only):
+   ```bash
+   cdk bootstrap
+   ```
+
+4. Synthesize the CloudFormation template:
+   ```bash
+   cdk synth
+   ```
+
+5. Deploy the stack:
+   ```bash
+    cd cdk
+    $env:CDK_DEFAULT_ACCOUNT = "your-actual-account-id"
+	echo $env:CDK_DEFAULT_ACCOUNT
+	cdk synth
+	cdk deploy
+   ```
+
+**Note:** Update the bucket name in `cdk/cdk/cdk_stack.py` to a unique name before deploying.
+
+### Lambda Function
+
+The Lambda function (`src/main.py`) processes S3 object created events and parses single-line files. It currently assumes JSON format but can be modified for other formats.
+
+## Test
+
+```bash
+pytest
+```
+
+## Notes
+
+- `pytest` is configured to include `src` on `PYTHONPATH` so `from main import greet` works correctly during test runs.
+
+## Architecture diagram
+
+https://excalidraw.com/#json=YjAOCUCbJ2cmELWg8ZJR0,idJt_u4ixHZmEFNxGW5dGg
+
