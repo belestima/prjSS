@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/main.py
+src/prjSS.egg-info/PKG-INFO
+src/prjSS.egg-info/SOURCES.txt
+src/prjSS.egg-info/dependency_links.txt
+src/prjSS.egg-info/top_level.txt
+tests/test_main.py

@@ -1,0 +1,36 @@
+{
+  "version": "53.0.0",
+  "files": {
+    "ee0f042e10afac89d49be89ea5a0fcd2ee82146cfd178e50656328c522c2c723": {
+      "displayName": "S3EventProcessor/Code",
+      "source": {
+        "path": "asset.ee0f042e10afac89d49be89ea5a0fcd2ee82146cfd178e50656328c522c2c723",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-us-east-1-848c0f81": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-us-east-1",
+          "objectKey": "ee0f042e10afac89d49be89ea5a0fcd2ee82146cfd178e50656328c522c2c723.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-us-east-1"
+        }
+      }
+    },
+    "6a420cdf7fb440ef06c2a44d29959cea91e10b11dead3aa672863f086b6a1ed7": {
+      "displayName": "CdkStack Template",
+      "source": {
+        "path": "CdkStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-us-east-1-9995857a": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-us-east-1",
+          "objectKey": "6a420cdf7fb440ef06c2a44d29959cea91e10b11dead3aa672863f086b6a1ed7.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
